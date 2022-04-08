@@ -4,7 +4,7 @@
 ### Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
 Among the variables vehicle_length, vehicle_weight, spoiler_angle, ground_clearnance and AWD will provide non-random amount variance. 
 Since we examined that mpg changes (dependent variable) are based on these pararmeters as independent variables.
-!Alt[]("../Resources/MechaCar_fullModel.png")
+!Alt[img]("../Resources/MechaCar_fullModel.png")
 ### Is the slope of the linear model considered to be zero? Why or why not?
 Over all intercept is significant in the linear model (estimated value is -1.040e+02 p-value is 5.08e-08 *** as shown above, which is highly signifcant p<0.0001>) Therefore we can't ignore the slope. However, for the individual parameters including spolier_angle and AWD, their estimated values (slopes) were not significant from zero; we can ignore these paramters in the linear model analysis. 
 

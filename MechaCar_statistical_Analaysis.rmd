@@ -1,0 +1,93 @@
+---
+title: "MechaCar_Statistical_Analysis"
+author: "MY"
+date: '2022-04-06'
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+library(dplyr)
+```
+### read Data
+```{r}
+MechaCar_Data<- read.csv("MechaCar_mpg.csv",check.names=F,stringsAsFactors = F)
+```
+### linier regression
+```{r}
+MechaCar_lm<-lm(mpg~vehicle_length+vehicle_weight+spoiler_angle+ground_clearance+AWD,data = MechaCar_Data)
+summary(MechaCar_lm)
+
+```
+### import SUspension_Coild data
+```{r}
+Suspension_Coil_Data<-read.csv2(file="Suspension_Coil.csv",header=TRUE, sep=",",
+                  quote = "\"",
+          dec = ",", fill = TRUE, comment.char = "")              
+```
+### Summary for SUspension_Coild data
+```{r}
+total_summary<-Suspension_Coil_Data %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI),.groups ="keep")
+paste(total_summary)
+```
+### lot summary
+```{r}
+
+lot_summary<-Suspension_Coil_Data %>% group_by(Manufacturing_Lot)%>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI),.groups ="keep")
+paste(lot_summary)
+```
+### T-Test
+```{r}
+mainPSI<-Suspension_Coil_Data %>% summarize(Mean=mean(PSI))
+PSI.list<-Suspension_Coil_Data %>% group_by(PSI)
+t.test((Suspension_Coil_Data$PSI),mu=1500) #compare sample versus population means
+
+```
+```{r}
+lot1Sample1<-subset(Suspension_Coil_Data, Manufacturing_Lot=="Lot1", select = VehicleID:PSI)
+t.test((lot1Sample1$PSI),mu=1500)
+
+```
+```{r}
+
+lot2Sample2<-subset(Suspension_Coil_Data, Manufacturing_Lot=="Lot2", select = VehicleID:PSI)
+t.test((lot2Sample2$PSI),mu=1500)
+
+```
+
+```{r}
+lot3Sample3<-subset(Suspension_Coil_Data, Manufacturing_Lot=="Lot3", select = VehicleID:PSI)
+t.test((lot3Sample3$PSI),mu=1500)
+
+```
+```{r}
+update.packages(ask = FALSE, checkBuilt = TRUE)
+tinytex::tlmgr_update()
+```
+
+```{r}
+tinytex::reinstall_tinytex()
+```
+
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

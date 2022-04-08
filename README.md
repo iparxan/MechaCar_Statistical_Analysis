@@ -4,7 +4,7 @@
 ### Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
 Among the variables vehicle_length, vehicle_weight, spoiler_angle, ground_clearnance and AWD will provide non-random amount variance. 
 Since we examined that mpg changes (dependent variable) are based on these pararmeters as independent variables.
-!Alt[Alt img]("/Resources/MechaCar_fullModel.png")
+![Alt img](Resources/MechaCar_fullModel.png)
 ### Is the slope of the linear model considered to be zero? Why or why not?
 Over all intercept is significant in the linear model (estimated value is -1.040e+02 p-value is 5.08e-08 *** as shown above, which is highly signifcant p<0.0001>) Therefore we can't ignore the slope. However, for the individual parameters including spolier_angle and AWD, their estimated values (slopes) were not significant from zero; we can ignore these paramters in the linear model analysis. 
 
@@ -13,12 +13,25 @@ Over all intercept is significant in the linear model (estimated value is -1.040
 Overall the full model could predict mpg Mechar prototypes, but not effectively. We did model comparision using stepwise methods in which every time we remove the non-signifcant paramatewrs and check the model is significant from previous one(which is full model). Finally based on ANOVA analysis for models, the only simple model is :
 mpg~ vehicle_length + ground_clearance. 
 even this model can also predict the mpg prototypes as the same level of Full model were all paramaters were included. There was no differentce between these two models. In addition, in the full model the significant role of vehicle_weight was marginal (p=0.0776, marginal significant); however after removing non-signifcant predictors, the value of vehicle_weight became less significant (p=0.096). Usually researchers chose the simple model if there is no signifcant change.
+FullModel
 
-!Alt[]("../Resources/MechaCar_Model1.png")
-!Alt[]("../Resources/MechaCar_Model2.png")
-!Alt[]("../Resources/MechaCar_Model3.png")
-!Alt[]("../Resources/MechaCar_Model4.png")
-!Alt[]("../Resources/MechaCar_model_comparision.png")
+![Alt img](Resources/MechaCar_Model1.png)
+
+Model2 without spoiler_angle
+
+![Alt img](Resources/MechaCar_Model2.png)
+
+Model3 removing spopoliler_angle and AWD
+
+![Alt img](Resources/MechaCar_Model3.png)
+
+Model4 base on Model3 removing vehicle_weight
+
+![Alt img](Resources/MechaCar_Model4.png)
+
+Compare three models
+
+![Alt img](Resources/MechaCar_model_comparision.png)
 
 # Delivery 2
 ##  Summary Statistics on Suspension Coils
@@ -33,10 +46,22 @@ even this model can also predict the mpg prototypes as the same level of Full mo
 # Delivery 3
 ## T-Tests on Suspension Coils
 Overall, from TotalTest screenshot, PSI value Ttest was marginal signifcant (t = -1.8931, df = 149, p-value = 0.06028) from the population mean which is about 1500. It seems like one of the LOT may have different values. therefore, seperate T-tests were conducted at each Lot  group. In Lot1 and Lot2, there were no significant differences between sample values with overall population PSI values (for LOT1: t = 0, df = 49, p-value = 1 and for LOT2: t = 0.51745, df = 49, p-value = 0.6072) respectively(see LOT1Test and LOT2Test screenshot). However, in LOT3 there was a significant difference (t = -2.0916, df = 49, p-value = 0.04168) between sample and population in terms of PSI values according to the LOT#Test screenshot. LOT3 significant from population may create marginal differnce among total samples in three lots against population.
-!alt[]("../Resources/TotalTest.png")
-!alt[]("../Resources/LOT1Test.png")
-!alt[]("../Resources/LOT2Test.png")
-!alt[]("../Resources/LOT3Test.png")
+
+Total Ttest
+
+![Alt img](Resources/TotalTest.png)
+
+T-Test on LOT1 group
+
+![Alt img](Resources/LOT1Test.png)
+
+T-test on LOT2 group
+
+![Alt img](Resources/LOT2Test.png)
+
+T-teston LOT3 group
+
+![Alt img](Resources/LOT3Test.png)
 
 
 

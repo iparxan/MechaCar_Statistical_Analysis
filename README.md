@@ -14,7 +14,7 @@ Over all intercept is significant in the linear model (estimated value is -1.040
 
 ### Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
 
-Overall the full model could predict mpg Mechar prototypes, but not effectively. We did model comparision using stepwise methods in which every time we remove the non-signifcant paramatewrs and check the model is significant from previous one(which is full model). Finally based on ANOVA analysis for models, the only simple model is :
+Overall the full model could predict mpg Mechar prototypes, but not effectively. We did model comparision using stepwise methods in which every time we remove the non-signifcant paramaters and check the model is significant from previous one(which is full model). Finally based on ANOVA analysis for models, the only simple model is :
 mpg~ vehicle_length + ground_clearance. 
 even this model can also predict the mpg prototypes as the same level of Full model were all paramaters were included. There was no differentce between these two models. In addition, in the full model the significant role of vehicle_weight was marginal (p=0.0776, marginal significant); however after removing non-signifcant predictors, the value of vehicle_weight became less significant (p=0.096). Usually researchers chose the simple model if there is no signifcant change.
 
@@ -22,21 +22,30 @@ FullModel
 
 ![Alt img](Resources/MechaCar_fullModel.png)
 
+
 Model2 without spoiler_angle
+
 
 ![Alt img](Resources/MechaCar_Model2.png)
 
+
 Model3 removing spopoliler_angle and AWD
+
 
 ![Alt img](Resources/MechaCar_Model3.png)
 
+
 Model4 base on Model3 removing vehicle_weight
+
 
 ![Alt img](Resources/MechaCar_Model4.png)
 
+
 Compare three models
 
+
 ![Alt img](Resources/model_comparision.png)
+
 
 # Delivery 2
 ##  Summary Statistics on Suspension Coils

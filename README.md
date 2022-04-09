@@ -54,7 +54,12 @@ Compare three models
 
 Not satisfied the request in which the variance should be lower than 100 pound per square. Even though LOT1 and LOT2 were satisfied the requirements, but  LOT3 had variance as 170 as opposed to the required value 100 pound. The result was signifcant. 
 
+TotalSummary
+![Alt img](Resources/total_summary.png)
 
+LOT sumamry
+
+![Alt img](Resources/lot_summary.png)
 
 # Delivery 3
 ## T-Tests on Suspension Coils

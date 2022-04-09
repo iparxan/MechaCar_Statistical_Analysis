@@ -2,8 +2,8 @@
 ## Linear Regression to Predict MPG, and write a short summary using a screenshot of the output from the linear regression, and address the following questions:
 
 ### Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
-Among the variables vehicle_length, vehicle_weight, spoiler_angle, ground_clearnance and AWD will provide non-random amount variance. 
-Since we examined that mpg changes (dependent variable) are based on these pararmeters as independent variables.
+Among the variables vehicle_length, vehicle_weight, spoiler_angle, ground_clearnance and AWD will provide non-random amount variance in the linear model. However, only vehicle_length and ground_clearnance slopes were signifcant in teh liniear modefull model. Therefore these two independent vaiables are non-random  amount of variance. 
+Since we examined that mpg changes (dependent variable) are based on these pararmeters as independent variables. From the R-squred value 0.7149 which means that 71.49% data can fit the model.
 
 FullModel
 
@@ -14,7 +14,7 @@ Over all intercept is significant in the linear model (estimated value is -1.040
 
 ### Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
 
-Overall the full model could predict mpg Mechar prototypes, but not effectively. We did model comparision using stepwise methods in which every time we remove the non-signifcant paramaters and check the model is significant from previous one(which is full model). Finally based on ANOVA analysis for models, the only simple model is :
+Overall the full model could predict mpg Mechar prototypes effectively. However, we can use more efficient model to predict the data.We did model comparision using stepwise methods in which every time we remove the non-signifcant paramaters and check the model is significant from previous one(which is full model). Finally based on ANOVA analysis for models, the only simple model is :
 mpg~ vehicle_length + ground_clearance. 
 even this model can also predict the mpg prototypes as the same level of Full model were all paramaters were included. There was no differentce between these two models. In addition, in the full model the significant role of vehicle_weight was marginal (p=0.0776, marginal significant); however after removing non-signifcant predictors, the value of vehicle_weight became less significant (p=0.096). Usually researchers chose the simple model if there is no signifcant change.
 

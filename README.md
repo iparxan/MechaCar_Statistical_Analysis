@@ -3,7 +3,7 @@
 
 ### Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
 Among the variables vehicle_length, vehicle_weight, spoiler_angle, ground_clearnance and AWD will provide non-random amount variance in the linear model. However, only vehicle_length and ground_clearnance slopes were signifcant in teh liniear modefull model. Therefore these two independent vaiables are non-random  amount of variance. 
-Since we examined that mpg changes (dependent variable) are based on these pararmeters as independent variables. From the R-squred value 0.7149 which means that 71.49% data can fit the model.
+Since we examined that mpg changes (dependent variable) are based on these pararmeters as independent variables. From the R-squred value 0.7149 which means that 71.49% data can be explianed by the model.
 
 FullModel
 

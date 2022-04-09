@@ -88,5 +88,29 @@ T-teston LOT3 group
 
 ## Study Design: MechaCar vs Competition
 
+### Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
 
+In this task we are going to predict the prices of the car with horsepower and highway fuel efficiency. If we assume horpower is higher then the car may cost higher, and higher highway feul effciency could matter for the price of saling teh cars especially in big cities.
+
+
+### In your description, address the following questions:
+#### What metric or metrics are you going to test?
+
+cost of the car is dependent variable;horse power and highway fuel efficiency are independent variables. 
+
+#### What is the null hypothesis or alternative hypothesis?
+
+Null hypothesis: the cost of the car will not chaneg based on the horse power and highway fuel efficiency. It means that in linear model using tehse parameters , we don't have signifcant sloe effects.
+Alternative hypothesis: The cost of teh card depends of the hgorse power and highway effeciency or at least one of them significantly influence the sales prices. If cars have higher horpse power than cars will be saled with higher prices same as highway fuel effeciency where cars used in big citires.
+
+
+#### What statistical test would you use to test the hypothesis? And why?
+
+linear regression model in which we use horse power and highway fuel efficiency to predict the cost of the cars.
+cost~horpse power+highway fuel efficiency
+If we find the sloeps of horsepower (or highway fuel effeciency) then it will tell us these variables could predict the prices; if we don't get significant slopes then these variables are random variables in the model where we predict cost of the cars.
+
+#### What data is needed to run the statistical test?
+
+horse power and highway feul effeciency data are needed.
 

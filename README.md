@@ -4,7 +4,10 @@
 ### Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
 Among the variables vehicle_length, vehicle_weight, spoiler_angle, ground_clearnance and AWD will provide non-random amount variance. 
 Since we examined that mpg changes (dependent variable) are based on these pararmeters as independent variables.
+FullModel
+
 ![Alt img](Resources/MechaCar_fullModel.png)
+
 ### Is the slope of the linear model considered to be zero? Why or why not?
 Over all intercept is significant in the linear model (estimated value is -1.040e+02 p-value is 5.08e-08 *** as shown above, which is highly signifcant p<0.0001>) Therefore we can't ignore the slope. However, for the individual parameters including spolier_angle and AWD, their estimated values (slopes) were not significant from zero; we can ignore these paramters in the linear model analysis. 
 
@@ -13,6 +16,7 @@ Over all intercept is significant in the linear model (estimated value is -1.040
 Overall the full model could predict mpg Mechar prototypes, but not effectively. We did model comparision using stepwise methods in which every time we remove the non-signifcant paramatewrs and check the model is significant from previous one(which is full model). Finally based on ANOVA analysis for models, the only simple model is :
 mpg~ vehicle_length + ground_clearance. 
 even this model can also predict the mpg prototypes as the same level of Full model were all paramaters were included. There was no differentce between these two models. In addition, in the full model the significant role of vehicle_weight was marginal (p=0.0776, marginal significant); however after removing non-signifcant predictors, the value of vehicle_weight became less significant (p=0.096). Usually researchers chose the simple model if there is no signifcant change.
+
 FullModel
 
 ![Alt img](Resources/MechaCar_Model1.png)
@@ -31,7 +35,7 @@ Model4 base on Model3 removing vehicle_weight
 
 Compare three models
 
-![Alt img](Resources/MechaCar_model_comparision.png)
+![Alt img](Resources/model_comparision.png)
 
 # Delivery 2
 ##  Summary Statistics on Suspension Coils
@@ -49,7 +53,7 @@ Overall, from TotalTest screenshot, PSI value Ttest was marginal signifcant (t =
 
 Total Ttest
 
-![Alt img](Resources/TotalTest.png)
+![Alt img](Resources/TotalTtest.png)
 
 T-Test on LOT1 group
 
@@ -57,11 +61,11 @@ T-Test on LOT1 group
 
 T-test on LOT2 group
 
-![Alt img](Resources/LOT2Test.png)
+![Alt img](Resources/LOT2Ttest.png)
 
 T-teston LOT3 group
 
-![Alt img](Resources/LOT3Test.png)
+![Alt img](Resources/LOT3Ttest.png)
 
 
 

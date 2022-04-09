@@ -4,6 +4,7 @@
 ### Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
 Among the variables vehicle_length, vehicle_weight, spoiler_angle, ground_clearnance and AWD will provide non-random amount variance. 
 Since we examined that mpg changes (dependent variable) are based on these pararmeters as independent variables.
+
 FullModel
 
 ![Alt img](Resources/MechaCar_fullModel.png)
@@ -19,7 +20,7 @@ even this model can also predict the mpg prototypes as the same level of Full mo
 
 FullModel
 
-![Alt img](Resources/MechaCar_Model1.png)
+![Alt img](Resources/MechaCar_fullModel.png)
 
 Model2 without spoiler_angle
 
@@ -53,7 +54,7 @@ Overall, from TotalTest screenshot, PSI value Ttest was marginal signifcant (t =
 
 Total Ttest
 
-![Alt img](Resources/TotalTtest.png)
+![Alt img](Resources/totalTtest.png)
 
 T-Test on LOT1 group
 

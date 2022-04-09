@@ -52,14 +52,13 @@ Compare three models
 
 ### The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
 
-
-
+Not satisfied the request in which the variance should be lower than 100 pound per square. Even though LOT1 and LOT2 were satisfied the requirements, but  LOT3 had variance as 170 as opposed to the required value 100 pound. The result was signifcant. 
 
 
 
 # Delivery 3
 ## T-Tests on Suspension Coils
-Overall, from TotalTest screenshot, PSI value Ttest was marginal signifcant (t = -1.8931, df = 149, p-value = 0.06028) from the population mean which is about 1500. It seems like one of the LOT may have different values. therefore, seperate T-tests were conducted at each Lot  group. In Lot1 and Lot2, there were no significant differences between sample values with overall population PSI values (for LOT1: t = 0, df = 49, p-value = 1 and for LOT2: t = 0.51745, df = 49, p-value = 0.6072) respectively(see LOT1Test and LOT2Test screenshot). However, in LOT3 there was a significant difference (t = -2.0916, df = 49, p-value = 0.04168) between sample and population in terms of PSI values according to the LOT#Test screenshot. LOT3 significant from population may create marginal differnce among total samples in three lots against population.
+Overall, from TotalTtest screenshot, PSI value Ttest was marginal signifcant (t = -1.8931, df = 149, p-value = 0.06028) from the population mean which is about 1500. It seems like one of the LOT may have different values. therefore, seperate T-tests were conducted at each Lot  group. In Lot1 and Lot2, there were no significant differences between sample values with overall population PSI values (for LOT1: t = 0, df = 49, p-value = 1 and for LOT2: t = 0.51745, df = 49, p-value = 0.6072) respectively(see LOT1Ttest and LOT2Ttest screenshot). However, in LOT3 there was a significant difference (t = -2.0916, df = 49, p-value = 0.04168) between sample and population in terms of PSI values according to the LOT3Ttest screenshot. LOT3 significant from population may create marginal differnce among total samples in three lots against population.
 
 Total Ttest
 
